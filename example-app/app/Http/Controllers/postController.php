@@ -3,8 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
-class postController extends Controller
+class PostController extends Controller
 {
-    //
+    public function index(){
+        //metode, kas atgriež visus post ierakstus
+        $posts = Post::all();
+        //dd($posts);
+        \Log::debug($posts);
+        return view('posts.index', ['allposts' => $posts]);
+    }
 }
