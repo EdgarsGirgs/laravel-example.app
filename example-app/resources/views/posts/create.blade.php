@@ -9,10 +9,15 @@
     <h1>Create post</h1>
     <form action="/post" method="get">
         @csrf
-        author: <input type="text" name = "author">
+        <label for="author"></label>
+        author: <input type="text" name = "author" id="author">
+
+        <label for="title">title</label>
         title: <input type="text" name= "title">
+
         content: <textarea name="content" id="content" cols="30" rows="10"></textarea>
         <input type="submit" value = "submit">
+        <label for="content">content</label>
     </form>
 </body>
 </html>
